@@ -26,9 +26,27 @@ Data can be encoded and saved to files in three formats currently: *JSON, Proper
 
 Read the [documentation](https://gtiapps.com/docs/gtstorable/index.html) for more information about the protocol's methods and the custom types used and supported. Alternatively see documentation on the code files under the Source directory.
 
+## Integrating GTStorable
+
+To integrate `GTStorable` into your projects follow the next steps:
+
+1. Copy the repository URL to GitHub (it can by clicking on the *Clone or Download* button).
+2. Open your project in Xcode.
+3. Go to menu **File > Swift Packages > Add Package Dependency...**.
+4. Paste the URL, select the package when it appears and click Next.
+5. In the *Rules* leave the default option selected (*Up to Next Major*) and click Next.
+6. Finally select the *GTStorable* package and select the *Target* to add to; click Finish.
+
+
 ## Usage Example
 
-Consider the following struct which conforms to GTStorable protocol.
+First, **import** `GTStorable` as a *module*:
+
+```swift
+import GTStorable
+```
+
+Consider the following struct which **adopts** the GTStorable protocol.
 
 ```swift
 struct User: Codable, GTStorable {
